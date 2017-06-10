@@ -1,0 +1,21 @@
+[user]
+	name = Aaron Peterson
+	email = aaronp@gmail.com
+[push]
+	default = matching
+[difftool]
+	prompt = false
+[color]
+	ui = true
+[difftool]
+	prompt = false
+[alias]
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --all --decorate --oneline --graph
+	lg = !"git lg1"
+[pull]
+	rebase = true
+[format]
+	pretty = oneline
+[diff]
+	tool = meld
