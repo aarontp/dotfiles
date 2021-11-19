@@ -1,0 +1,165 @@
+{
+    "editor.tabSize": 2,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "vim.leader": ",",
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "y",
+                "g",
+                "v",
+                ",",
+                "c",
+                "<esc>"
+                "p"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "O"
+            ],
+            "commands": [
+                "outline.focus",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.evenEditorWidths",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "T"
+            ],
+            "commands": [
+                ":vsplit",
+                ":vsplit",
+                "workbench.action.evenEditorWidths",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "y",
+                "y",
+                ",",
+                "c",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode",
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<Leader>",
+                "t"
+            ],
+            "commands": [
+                ":tabnew"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
+            "commands": [
+                ":tabnext"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "h"
+            ],
+            "commands": [
+                ":tabprev"
+            ]
+        },
+    ],
+    "zenMode.hideTabs": false
+}

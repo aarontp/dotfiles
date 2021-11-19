@@ -1,0 +1,40 @@
+#!/bin/bash
+
+LAPTOP="eDP-1"
+EXTERNAL="HDMI-1"
+LOG="/tmp/autorandr.log"
+date >> $LOG
+
+echo "Current profile is ${AUTORANDR_CURRENT_PROFILE}" >> $LOG
+
+
+# Main monitor is on the left
+if [[ ${AUTORANDR_CURRENT_PROFILE} == "docked" ]] ; then
+	MONITOR=$EXTERNAL
+	WORKSPACES=$( seq 4 10 )
+
+# Main monitor is on the right
+elif [[ ${AUTORANDR_CURRENT_PROFILE} == "docked-right" ]] ; then
+	MONITOR=$EXTERNAL
+	WORKSPACES=$( seq 4 10 )
+
+# Main monitor is on the right
+elif [[ ${AUTORANDR_CURRENT_PROFILE} == "docked-above" ]] ; then
+	EXTERNAL="DP-1"
+	MONITOR=$EXTERNAL
+	WORKSPACES=$( seq 4 10 )
+
+elif [[ ${AUTORANDR_CURRENT_PROFILE} == "laptop" ]] ; then
+	MONITOR=$RIGHT
+	WORKSPACES=$( seq 1 10 )
+else
+	echo "No autorandr profile detected... exiting."
+	exit 1
+fi
+
+
+for i in $WORKSPACES ; do
+	echo i3-msg "[workspace=$i] move workspace to output $MONITOR" >> $LOG
+	i3-msg "[workspace=$i] move workspace to output $MONITOR" &
+done
+
