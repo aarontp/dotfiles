@@ -38,3 +38,4 @@ for i in $WORKSPACES ; do
 	i3-msg "[workspace=$i] move workspace to output $MONITOR" &
 done
 
+/home/aaronpeterson/bin/mouse-accel.sh
