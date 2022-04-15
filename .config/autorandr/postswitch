@@ -11,18 +11,18 @@ echo "Current profile is ${AUTORANDR_CURRENT_PROFILE}" >> $LOG
 # Main monitor is on the left
 if [[ ${AUTORANDR_CURRENT_PROFILE} == "docked" ]] ; then
 	MONITOR=$EXTERNAL
-	WORKSPACES=$( seq 4 10 )
+	WORKSPACES=$( seq 1 7 )
 
 # Main monitor is on the right
 elif [[ ${AUTORANDR_CURRENT_PROFILE} == "docked-right" ]] ; then
 	MONITOR=$EXTERNAL
-	WORKSPACES=$( seq 4 10 )
+	WORKSPACES=$( seq 1 7 )
 
 # Main monitor is on the right
 elif [[ ${AUTORANDR_CURRENT_PROFILE} == "docked-above" ]] ; then
 	EXTERNAL="DP-1"
 	MONITOR=$EXTERNAL
-	WORKSPACES=$( seq 4 10 )
+	WORKSPACES=$( seq 1 7 )
 
 elif [[ ${AUTORANDR_CURRENT_PROFILE} == "laptop" ]] ; then
 	MONITOR=$RIGHT
