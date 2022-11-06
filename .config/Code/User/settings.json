@@ -47,7 +47,7 @@
                 "v",
                 ",",
                 "c",
-                "<esc>"
+                "<esc>",
                 "p"
             ]
         },
@@ -161,5 +161,6 @@
             ]
         },
     ],
-    "zenMode.hideTabs": false
+    "zenMode.hideTabs": false,
+    "files.trimTrailingWhitespace": true
 }
