@@ -102,6 +102,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+bracketright move workspace to output right
 bindsym $mod+bracketleft move workspace to output left
 
+# Change workpaces
 bindsym $mod+Mod1+Right workspace next_on_output
 bindsym $mod+Mod1+Left workspace prev_on_output
 bindsym $mod+Mod1+Shift+Right move container to workspace next_on_output
