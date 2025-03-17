@@ -101,6 +101,8 @@ bindsym $mod+Shift+Right move right
 
 bindsym $mod+bracketright move workspace to output right
 bindsym $mod+bracketleft move workspace to output left
+bindsym $mod+Page_Up move workspace to output up
+bindsym $mod+Page_Down move workspace to output down
 
 # Change workpaces
 bindsym $mod+Mod1+Right workspace next_on_output

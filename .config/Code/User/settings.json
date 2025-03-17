@@ -1,5 +1,9 @@
 {
     "editor.tabSize": 2,
+    "pylint.args": [
+        "--indent-string",
+        "  "
+    ],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -161,6 +165,9 @@
             ]
         },
     ],
-    "zenMode.hideTabs": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "geminicodeassist.project": "",
+    "cloudcode.duetAI.project": ""
 }
