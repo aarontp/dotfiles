@@ -1,0 +1,151 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+
+
+##############
+# old config
+##############
+
+# general {
+        # colors = true
+        # interval = 5
+	# color_separator = "#00E1FF"
+# }
+
+# order += "wireless _first_"
+# order += "ethernet _first_"
+# order += "battery all"
+# order += "disk /"
+# order += "load"
+# #order += "memory"
+# order += "tztime sydney"
+# order += "tztime utc"
+# order += "tztime zurich"
+# order += "tztime local"
+
+# wireless _first_ {
+        # format_up = "W: (%quality at %essid) %ip"
+        # format_down = "W: down"
+# }
+
+# ethernet _first_ {
+        # format_up = "E: %ip (%speed)"
+        # format_down = "E: down"
+# }
+
+# battery all {
+        # format = "%status %percentage %remaining"
+# }
+
+# disk "/" {
+        # format = "%avail"
+# }
+
+# load {
+        # format = "Load: %1min %5min"
+# }
+
+# tztime local {
+        # format = "%Y-%m-%d %H:%M:%S"
+	# # would like to use this color, but need to convert to pango format
+	# #color = "#edf7ba"
+# }
+
+# tztime zurich {
+        # format = "%H:%M:%S ZRH"
+        # timezone = "Europe/Zurich"
+# }
+
+# tztime utc {
+        # format = "%H:%M:%S UTC"
+        # timezone = "Etc/UTC"
+# }
+
+# tztime sydney {
+        # format = "%H:%M:%S SYD"
+        # timezone = "Australia/Sydney"
+# }
+################################################o
+# End old config
+################################################o
+
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+general {
+    colors = true
+    interval = 5
+    color_separator = "#00E1FF"
+    # This is still the crucial line for Pango markup
+    markup = "pango"
+}
+
+# The order of the modules on the status line
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /"
+order += "load"
+order += "tztime sydney"
+order += "tztime utc"
+order += "tztime zurich"
+order += "tztime local"
+
+
+battery all {
+    format = "<span weight='bold'>Battery:</span> <span foreground='%color'>%status %percentage (%remaining)</span>"
+
+    status_chr = "⚡ Charging"
+    status_bat = "🔋 Discharging"
+    status_unk = "❓ Unknown"
+    status_full = "✅ Full"
+    low_threshold = 15
+    threshold_type = "time"
+}
+
+wireless _first_ {
+    format_up = "<span foreground='#4CFF33'>📡 </span><span weight='bold'>WLAN:</span> <span foreground='#FFFFFF'>%essid (%quality) %ip</span>"
+    format_down = "<span foreground='#FF3333'>📡 </span><span weight='bold'>WLAN:</span> <span foreground='#FFFFFF'>down</span>"
+}
+
+ethernet _first_ {
+    format_up = "<span foreground='#4CFF33'>🌐 </span><span weight='bold'>ETH:</span> <span foreground='#FFFFFF'>%ip (%speed)</span>"
+    format_down = "<span foreground='#FF3333'>🌐 </span><span weight='bold'>ETH:</span> <span foreground='#FFFFFF'>down</span>"
+}
+
+disk "/" {
+    format = "<span foreground='#8C79C9'>💾 </span><span weight='bold'>Root:</span> <span foreground='#FFFFFF'>%avail</span>"
+}
+
+load {
+    format = "<span foreground='#FFC107'>📈 </span><span weight='bold'>Load:</span> <span foreground='#FFFFFF'>%1min %5min</span>"
+}
+
+memory {
+    format = "<span foreground='#E04242'>🧠 </span><span weight='bold'>Mem:</span> <span foreground='#FFFFFF'>%used/%total</span>"
+}
+
+tztime local {
+    format = "<span foreground='#e6f78d' weight='bold'>🗓️ %Y-%m-%d %H:%M:%S</span>"
+}
+
+tztime zurich {
+    format = "<span foreground='#e6f78d'>🇨🇭 ZRH: %H:%M</span>"
+    timezone = "Europe/Zurich"
+}
+
+tztime utc {
+    format = "<span foreground='#e6f78d' weight='bold'>🌐 UTC: %H:%M</span>"
+    timezone = "Etc/UTC"
+}
+
+tztime sydney {
+    format = "<span foreground='#e6f78d'>🇦🇺 SYD: %H:%M</span>"
+    timezone = "Australia/Sydney"
+}
