@@ -171,4 +171,9 @@
     "geminicodeassist.project": "",
     "cloudcode.duetAI.project": "",
     "files.trimTrailingWhitespace": true
+    "flake8.args": [
+        "--ignore=E111,E114,E117",
+        "--indent-size=2",
+    ],
+    "docker.extension.enableComposeLanguageServer": false
 }
