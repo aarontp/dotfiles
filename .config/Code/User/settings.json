@@ -169,5 +169,6 @@
     "remote.autoForwardPortsSource": "hybrid",
     "terminal.integrated.defaultProfile.linux": "bash",
     "geminicodeassist.project": "",
-    "cloudcode.duetAI.project": ""
+    "cloudcode.duetAI.project": "",
+    "files.trimTrailingWhitespace": true
 }
