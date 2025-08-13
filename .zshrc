@@ -108,3 +108,5 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zshrc.work ] ; then
 	. ~/.zshrc.work 
 fi
+
+unsetopt hist_verify
