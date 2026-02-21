@@ -19,9 +19,9 @@
 	pretty = oneline
 [diff]
 	tool = meld
-[credential "https://github.com"]
-        helper =
-        helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-        helper =
-        helper = !/usr/bin/gh auth git-credential
+[credential "https://github.com/aarontp/"]
+        helper = !/home/aaronp/.config/git/credentials/personal
+[credential "https://github.com/project-mammoth/"]
+        helper = !/home/aaronp/.config/git/credentials/project-mammoth
+[credential "https://github.com/tahooligans/"]
+        helper = !/home/aaronp/.config/git/credentials/tahooligans
